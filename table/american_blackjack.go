@@ -95,7 +95,7 @@ func (abj *AmericanBlackjack) clearHands() {
 	abj.dealerFirstCardFlipped = true
 	abj.insuredPlayers = []contract.PlayerId{}
 	abj.dealerHand = abj.createDealerHand()
-	for playerId, _ := range abj.playerHands {
+	for playerId := range abj.playerHands {
 		abj.playerHands[playerId] = nil
 	}
 }

@@ -710,7 +710,7 @@ func Test_getAvailableActions(t *testing.T) {
 			},
 		},
 		{
-			"Available actions: Hit, Stay.",
+			"Available actions: Hit, Stay, Insurance.",
 			func() *contract.Player {
 				_player := player.New("Player", 0, tmiPtr)
 
@@ -735,6 +735,7 @@ func Test_getAvailableActions(t *testing.T) {
 			[]contract.GameAction{
 				contract.GameActionHit,
 				contract.GameActionStay,
+				contract.GameActionInsurance,
 			},
 		},
 		{
@@ -776,6 +777,7 @@ func Test_getAvailableActions(t *testing.T) {
 				tc.dealerHandCreator(),
 				tc.playerHandCreator(),
 				tc.playerHandAmount,
+				false,
 			)
 
 			if !slices.Equal(tc.expectedActions, availableActions) {

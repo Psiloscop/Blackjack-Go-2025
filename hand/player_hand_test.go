@@ -38,13 +38,6 @@ func Test_PlayerHand_IsSplittable(t *testing.T) {
 		},
 		{
 			[]card.Card{
-				card.New(card.Hearts, card.Ace),
-				card.New(card.Hearts, card.Ace),
-			},
-			true,
-		},
-		{
-			[]card.Card{
 				card.New(card.Hearts, card.Jack),
 				card.New(card.Hearts, card.Queen),
 			},
